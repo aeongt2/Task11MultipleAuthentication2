@@ -1,0 +1,51 @@
+﻿@model Task11MultipleAuthentication2.Models.VMs.RegisterVM
+<h2>Register</h2>
+<div class=" offset-md-1 col-md-7">
+    <form asp-action="Register" asp-controller="Account">
+        <h4>Use your credentials to login</h4>
+        <hr />
+
+        <div class="form-group row ">
+            <label asp-for="FirstName" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row ">
+            <label asp-for="LastName" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group  row ">
+            <label asp-for="Email" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Password" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="ConfirmPassword" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="">
+            <input type="submit" value="Register" class="form-control col-md-4 offset-md-3 btn-outline-primary btn-sm" />
+        </div>
+    </form>
+</div>
+@section scripts{
+<partial name="_ValidationScriptsPartial" />
+}

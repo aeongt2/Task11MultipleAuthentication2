@@ -1,0 +1,44 @@
+﻿@model Task11MultipleAuthentication2.Models.VMs.LoginVM
+<h2>Login</h2>
+<div class=" offset-md-1 col-md-7">
+    <form asp-action="Login" asp-controller="Account">
+        <h4>Use your credentials to login</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group  row ">
+            <label asp-for="Email" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Password" class="col-md-3"></label>
+            <div class="col-md-7">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row ">
+
+            <label asp-for="RememberMe" class="col-md-3">    </label>
+            <div class="col-md-7">
+                <input asp-for="RememberMe" class="" />
+            </div>
+        </div>
+        <div class="">
+            <input type="submit" value="Login" class="form-control col-md-4 offset-md-3 btn-outline-primary btn-sm" />
+        </div>
+        <div class="row pt-3">
+            <div class="pt-3">
+                <a asp-controller="Account" class="offset-3" asp-action="Register">Register</a>
+            </div> 
+            <div class="pt-3">
+                <a asp-controller="Account" class="offset-3" asp-action="ForgotPassword">ForgotPassword</a>
+            </div>
+        </div>
+    </form>
+</div>
+@section scripts{
+<partial name="_ValidationScriptsPartial" />
+}
